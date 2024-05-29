@@ -1,5 +1,5 @@
 'use client'
-import { OrbitControls } from '@react-three/drei'
+import { Center, OrbitControls } from '@react-three/drei'
 import { Canvas as ThreeCanvas } from '@react-three/fiber'
 
 type Props = {
@@ -17,7 +17,10 @@ const Shirt = () => (
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
 		<ThreeCanvas camera={{ position, fov }} className='h-full'>
-			<Shirt />
+			<Center>
+				<Shirt />
+			</Center>
+
 			<OrbitControls />
 		</ThreeCanvas>
 	)
