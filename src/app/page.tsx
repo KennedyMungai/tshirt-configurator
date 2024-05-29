@@ -1,9 +1,9 @@
-import Canvas from '@/components/canvas'
+import CanvasComponent from '@/components/canvas'
 
 const Home = () => {
 	return (
 		<main>
-			<Canvas />
+			<CanvasComponent />
 		</main>
 	)
 }
