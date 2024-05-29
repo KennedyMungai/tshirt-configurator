@@ -1,6 +1,11 @@
 'use client'
 import { Canvas as ThreeCanvas } from '@react-three/fiber'
 
+type Props = {
+	position: [number, number, number]
+	fov: number
+}
+
 const Shirt = () => (
 	<mesh>
 		<boxGeometry args={[1, 1, 1]} />
@@ -8,9 +13,9 @@ const Shirt = () => (
 	</mesh>
 )
 
-const CanvasComponent = () => {
+const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
-		<ThreeCanvas>
+		<ThreeCanvas camera={{ position, fov }}>
 			<Shirt />
 		</ThreeCanvas>
 	)
