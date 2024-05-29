@@ -4,7 +4,7 @@ import { Canvas as ThreeCanvas } from '@react-three/fiber'
 const Shirt = () => (
 	<mesh>
 		<boxGeometry args={[1, 1, 1]} />
-		<meshStandardMaterial color='orange' />
+		<meshNormalMaterial />
 	</mesh>
 )
 
