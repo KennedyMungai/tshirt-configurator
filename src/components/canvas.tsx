@@ -8,7 +8,7 @@ type Props = {
 
 const Shirt = () => (
 	<mesh>
-		<boxGeometry args={[1, 1, 1]} />
+		<boxGeometry args={[0.9, 0.9, 0.9]} />
 		<meshNormalMaterial />
 	</mesh>
 )
