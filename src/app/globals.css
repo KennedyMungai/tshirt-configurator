@@ -4,7 +4,7 @@
 
 :root,
 html,
-body {
+body, main {
 	@apply h-screen overflow-hidden w-full p-0 m-0 select-none bg-slate-100/80;
 }
 
