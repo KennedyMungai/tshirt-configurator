@@ -1,5 +1,11 @@
+import Canvas from '@/components/canvas'
+
 const Home = () => {
-	return <main>Home</main>
+	return (
+		<main>
+			<Canvas />
+		</main>
+	)
 }
 
 export default Home
