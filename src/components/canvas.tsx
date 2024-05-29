@@ -15,7 +15,7 @@ const Shirt = () => (
 
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
-		<ThreeCanvas camera={{ position, fov }}>
+		<ThreeCanvas camera={{ position, fov }} className='h-full'>
 			<Shirt />
 		</ThreeCanvas>
 	)
