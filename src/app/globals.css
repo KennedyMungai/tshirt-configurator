@@ -5,9 +5,9 @@
 :root,
 html,
 body {
-  @apply h-screen overflow-hidden w-full p-0 m-0 select-none bg-slate-100/80;
-  }
-  
-  canvas {
-    @apply touch-none;
+	@apply h-screen overflow-hidden w-full p-0 m-0 select-none bg-slate-100/80;
+}
+
+canvas {
+	@apply touch-none;
 }
