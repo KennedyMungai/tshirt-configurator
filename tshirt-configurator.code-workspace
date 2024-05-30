@@ -5,6 +5,13 @@
 		}
 	],
 	"settings": {
-		"cSpell.words": ["Configurator", "drei", "GLTF", "maath", "pmndrs"]
+		"cSpell.words": [
+			"Configurator",
+			"Customizer",
+			"drei",
+			"GLTF",
+			"maath",
+			"pmndrs"
+		]
 	}
 }
