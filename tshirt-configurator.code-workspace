@@ -5,6 +5,6 @@
 		}
 	],
 	"settings": {
-		"cSpell.words": ["Configurator", "drei", "GLTF", "maath"]
+		"cSpell.words": ["Configurator", "drei", "GLTF", "maath", "pmndrs"]
 	}
 }
