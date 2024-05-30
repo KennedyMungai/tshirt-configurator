@@ -82,7 +82,7 @@ const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 					<TShirt />
 					<Backdrop />
 				</Center>
-				<OrbitControls />
+				{/* <OrbitControls /> */}
 			</CameraRig>
 		</ThreeCanvas>
 	)
