@@ -1,5 +1,11 @@
 'use client'
-import { Center, Environment, OrbitControls, useGLTF } from '@react-three/drei'
+import {
+	AccumulativeShadows,
+	Center,
+	Environment,
+	OrbitControls,
+	useGLTF
+} from '@react-three/drei'
 import { Canvas as ThreeCanvas } from '@react-three/fiber'
 
 type Props = {
@@ -22,6 +28,8 @@ const TShirt = (props) => {
 	)
 }
 
+const Backdrop = () => <AccumulativeShadows></AccumulativeShadows>
+
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
 		<ThreeCanvas camera={{ position, fov }} className='h-full'>
@@ -29,8 +37,8 @@ const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 			<Environment preset='city' />
 			<Center>
 				<TShirt />
+				<Backdrop />
 			</Center>
-
 			<OrbitControls />
 		</ThreeCanvas>
 	)
