@@ -7,7 +7,8 @@ import {
 	RandomizedLight,
 	useGLTF
 } from '@react-three/drei'
-import { Canvas as ThreeCanvas } from '@react-three/fiber'
+import { Canvas as ThreeCanvas, useFrame } from '@react-three/fiber'
+import { ReactNode, useRef } from 'react'
 
 type Props = {
 	position: [number, number, number]
@@ -55,16 +56,28 @@ const Backdrop = () => (
 	</AccumulativeShadows>
 )
 
+const CameraRig = ({ children }: { children: ReactNode }) => {
+	const groupItem = useRef()
+
+	useFrame((state, delta) => {
+		// console.log(state.camera.position)
+	})
+
+	return <group ref={groupItem}>{children}</group>
+}
+
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
 		<ThreeCanvas shadows camera={{ position, fov }} className='h-full'>
 			<ambientLight intensity={1.0} />
 			<Environment preset='city' />
-			<Center>
-				<TShirt />
-				<Backdrop />
-			</Center>
-			<OrbitControls />
+			<CameraRig>
+				<Center>
+					<TShirt />
+					<Backdrop />
+				</Center>
+				<OrbitControls />
+			</CameraRig>
 		</ThreeCanvas>
 	)
 }
