@@ -50,7 +50,7 @@ const Backdrop = () => (
 
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
-		<ThreeCanvas camera={{ position, fov }} className='h-full'>
+		<ThreeCanvas shadows camera={{ position, fov }} className='h-full'>
 			<ambientLight intensity={1.0} />
 			<Environment preset='city' />
 			<Center>
