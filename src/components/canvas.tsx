@@ -4,6 +4,7 @@ import {
 	Center,
 	Environment,
 	OrbitControls,
+	RandomizedLight,
 	useGLTF
 } from '@react-three/drei'
 import { Canvas as ThreeCanvas } from '@react-three/fiber'
@@ -36,7 +37,9 @@ const Backdrop = () => (
 		scale={10}
 		rotation={[Math.PI / 2, 0, 0]}
 		position={[0, 0, -0.14]}
-	></AccumulativeShadows>
+	>
+		<RandomizedLight />
+	</AccumulativeShadows>
 )
 
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
