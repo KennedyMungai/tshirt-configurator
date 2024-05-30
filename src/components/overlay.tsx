@@ -5,8 +5,8 @@ const Overlay = () => {
 	return (
 		<div className='z-10 container absolute top-0 left-0 h-full w-full'>
 			<header className='flex justify-between p-10 text-white'>
-				<Logo width={40} height={40} />
-				<AiOutlineShopping size='3rem' />
+				<Logo width={40} height={40} color='#f85' />
+				<AiOutlineShopping size='3rem' className='text-orange-500' />
 			</header>
 
 			<section key='main'>
