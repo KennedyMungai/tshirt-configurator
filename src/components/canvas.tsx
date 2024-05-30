@@ -28,7 +28,16 @@ const TShirt = (props) => {
 	)
 }
 
-const Backdrop = () => <AccumulativeShadows></AccumulativeShadows>
+const Backdrop = () => (
+	<AccumulativeShadows
+		temporal
+		frames={60}
+		alphaTest={0.85}
+		scale={10}
+		rotation={[Math.PI / 2, 0, 0]}
+		position={[0, 0, -0.14]}
+	></AccumulativeShadows>
+)
 
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
