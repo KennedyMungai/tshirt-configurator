@@ -59,6 +59,6 @@ const Customizer = () => {
 	)
 }
 
-const Overlay = () => <Customizer />
+const Overlay = () => <Intro />
 
 export default Overlay
