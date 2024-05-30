@@ -8,6 +8,7 @@ import {
 	useGLTF
 } from '@react-three/drei'
 import { Canvas as ThreeCanvas, useFrame } from '@react-three/fiber'
+import { easing } from 'maath'
 import { ReactNode, useRef } from 'react'
 
 type Props = {
@@ -60,7 +61,12 @@ const CameraRig = ({ children }: { children: ReactNode }) => {
 	const groupItem = useRef()
 
 	useFrame((state, delta) => {
-		// console.log(state.camera.position)
+		easing.dampE(
+			groupItem.current.rotation,
+			[state.pointer.y / 10, -state.pointer.x / 5, 0],
+			0.25,
+			delta
+		)
 	})
 
 	return <group ref={groupItem}>{children}</group>
