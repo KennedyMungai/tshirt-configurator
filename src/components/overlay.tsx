@@ -18,22 +18,13 @@ const Overlay = () => {
 					</div>
 					<div className='absolute right-2 top-60'>
 						<div className='w-72 flex flex-col gap-20'>
-							<p className='text-2xl text-orange-400'>
+							<p className='text-2xl text-orange-400 hidden lg:block'>
 								Create your unique and exclusive shirt with our
 								brand-new customization tool.{' '}
 								<strong>Unleash your imagination</strong> and
 								define your own style
 							</p>
-							<button
-								style={{
-									background: 'black',
-									color: 'white',
-									borderRadius: 6,
-									padding: 10,
-									display: 'flex',
-									gap: 5
-								}}
-							>
+							<button className='bg-black text-white rounded-md px-2 py-1 gap-2 flex items-center justify-center'>
 								CUSTOMIZE IT{' '}
 								<AiOutlineHighlight size='1.3rem' />
 							</button>
