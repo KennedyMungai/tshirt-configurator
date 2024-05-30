@@ -15,13 +15,14 @@ type Props = {
 	fov: number
 }
 
-const TShirt = (props) => {
+const TShirt = (props: any) => {
 	const { nodes, materials } = useGLTF('/t-shirt.glb')
 	return (
 		<group {...props} dispose={null}>
 			<mesh
 				castShadow
 				receiveShadow
+				// @ts-ignore
 				geometry={nodes.T_Shirt_male.geometry}
 				material={materials.lambert1}
 				rotation={[Math.PI / 2, 0, 0]}
@@ -61,13 +62,15 @@ const CameraRig = ({ children }: { children: ReactNode }) => {
 
 	useFrame((state, delta) => {
 		easing.dampE(
-			groupItem.current.rotation,
+			// @ts-ignore
+			groupItem?.current.rotation,
 			[state.pointer.y / 10, -state.pointer.x / 5, 0],
 			0.25,
 			delta
 		)
 	})
 
+	// @ts-ignore
 	return <group ref={groupItem}>{children}</group>
 }
 
