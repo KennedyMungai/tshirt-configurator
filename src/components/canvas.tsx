@@ -1,5 +1,5 @@
 'use client'
-import { Center, OrbitControls, useGLTF } from '@react-three/drei'
+import { Center, Environment, OrbitControls, useGLTF } from '@react-three/drei'
 import { Canvas as ThreeCanvas } from '@react-three/fiber'
 
 type Props = {
@@ -25,7 +25,8 @@ const TShirt = (props) => {
 const CanvasComponent = ({ fov = 25, position = [-1, 0, 2.5] }: Props) => {
 	return (
 		<ThreeCanvas camera={{ position, fov }} className='h-full'>
-			<ambientLight intensity={0.75} />
+			<ambientLight intensity={1.0} />
+			{/* <Environment preset='city' /> */}
 			<Center>
 				<TShirt />
 			</Center>
